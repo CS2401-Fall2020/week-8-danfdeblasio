@@ -1,17 +1,24 @@
 
 public class ScoreLLNode {
-  // add variables 
+  private String username; 
+  private int scoreTotal;
+  private int scoreCount;
+  public ScoreLLNode next;
+  public ScoreLLNode previous;
   
   ScoreLLNode(String inUsername, int inScore){
-    // add content
+    username = inUsername;
+    scoreTotal = inScore; 
+    scoreCount = 1;
   }
   
   public void addScore(int inScore) {
-    // add content
+    scoreTotal += inScore; 
+    scoreCount++;
   }
   
   public String toString() {
-    // add content
+    return username + " (" + ((double)scoreTotal/scoreCount) + ")";
   }
   
   public int compareTo(String inUsername) {
